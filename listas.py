@@ -14,7 +14,7 @@ media = sum / len(nums)
 # # Inserir um novo elemento no final da lista
 # nums.append(17) # [2,5,8,11,7,9,13,17]
 
-# # Inserir vários elementos no final da lista~
+# # Inserir vários elementos no final da lista
 # nums.extend([12,16]) # [2,5,8,11,7,9,13,17,12,16]
 
 # # Inserir em posição específica
