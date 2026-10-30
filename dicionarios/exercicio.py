@@ -85,7 +85,7 @@ for livro in biblioteca.values():
 print(titulos)
 
 
-exercicio4 = {n: n * n for n in range(1,11)}
+exercicio4 = {str(n): n * n for n in range(1,11)}
 print(exercicio4)
 
 
