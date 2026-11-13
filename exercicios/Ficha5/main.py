@@ -1,6 +1,6 @@
 import os
 # Importar a função menu do ficheiro produtos
-from funcoes import menu
+from exercicios.Ficha5.funcoes import menu
 
 menu()
 
