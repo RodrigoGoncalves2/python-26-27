@@ -2,16 +2,41 @@ from time import sleep
 from os import system
 from datetime import datetime
 
-def registar_log(mensagem):
-    data = datetime.now
-    return f""
-
 def meu_decorador(funcao):
     def wrapper(*args, **kwargs):
         funcao(*args, **kwargs)
         sleep(3)
         system("cls")
     return wrapper
+
+def guardar_json(inventario):
+    with open(ficheiro_json,"w") as f:
+        json.dump(inventario,f,indent=4)
+
+@meu_decorador
+def carregar_json(inventario):
+    if not path.exists(ficheiro_json):
+        print("Ficheiro inexistente ou noutra localização!!") 
+    else:
+        with open(ficheiro_json,"r") as f:
+            dados = json.load(f)
+            print("Dados carregados com sucesso!")
+            return dados
+
+@meu_decorador
+def visualizar_log():
+    if not path.exists(ficheiro_log):
+        print("Ficheiro inexistente ou noutra localização!!")
+    else:
+        with open(ficheiro_log,"r") as f:
+            conteudo = f.readlines()
+            for linha in conteudo:
+                print(linha.strip())
+
+@meu_decorador
+def registar_log(mensagem):
+    data = datetime.now
+    return f""
 
 @meu_decorador
 def view(inventario):
